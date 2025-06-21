@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/server.bundle.js",
-  "type": "module",
   "scripts": {
     "build": "webpack --mode=production",
     "start": "node dist/server.bundle.js",

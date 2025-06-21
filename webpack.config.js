@@ -10,7 +10,7 @@ module.exports = {
   target: 'node', // Crucial for Node.js builds
   externals: [nodeExternals()], // Exclude node_modules from the bundle
   experiments: {
-    outputModule: true,
+    outputModule: false,
   },
   module: {
     rules: [
