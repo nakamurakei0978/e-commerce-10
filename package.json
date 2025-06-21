@@ -2,10 +2,10 @@
   "name": "e-commerce-api-10",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/server.bundle.js",
+  "main": "dist/app.js",
   "scripts": {
-    "build": "webpack --mode=production",
-    "start": "node dist/server.bundle.js",
+    "build": "babel src --out-dir dist --copy-files",
+    "start": "node dist/app.js",
     "dev": "nodemon -r @babel/register src/app.js"
   },
   "author": "",
@@ -31,14 +31,11 @@
     "xss-clean": "^0.1.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.27.1",
     "@babel/core": "^7.27.4",
     "@babel/preset-env": "^7.27.2",
     "@babel/register": "^7.27.1",
-    "babel-loader": "^10.0.0",
-    "nodemon": "^2.0.9",
-    "webpack": "^5.99.9",
-    "webpack-cli": "^6.0.1",
-    "webpack-node-externals": "^3.0.0"
+    "nodemon": "^2.0.9"
   },
   "engines": {
     "node": ">=18.0.0"
