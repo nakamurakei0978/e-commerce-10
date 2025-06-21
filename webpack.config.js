@@ -16,9 +16,6 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader', // Use if you need Babel for ES6+ features
-          options: {
-            presets: ['@babel/preset-env'],
-          },
         },
       },
     ],

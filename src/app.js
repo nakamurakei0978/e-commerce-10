@@ -1,6 +1,5 @@
 import "express-async-errors";
 import "dotenv/config";
-import "@babel/register";
 import fileUpload from "express-fileupload";
 import express from "express";
 import connectDB from "../db/connect.js";
