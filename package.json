@@ -4,8 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "install": "npm install --production=false",
-    "build": "npm run build",
+    "build": "npm install && webpack --mode=production",
     "start": "node dist/server.bundle.js",
     "dev": "nodemon -r @babel/register src/app.js"
   },
