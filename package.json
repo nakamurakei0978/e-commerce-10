@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/app.js",
   "scripts": {
-    "build": "babel src --out-dir dist --copy-files",
+    "build": "npm install && babel src --out-dir dist --copy-files",
     "start": "node dist/app.js",
     "dev": "nodemon -r @babel/register src/app.js"
   },
