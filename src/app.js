@@ -58,10 +58,14 @@ app.use(errorHandlerMiddleware);
 
 const start = async () => {
   try {
+    if (!process.env.MONGO_URL) {
+      throw new Error('MONGO_URL environment variable is required');
+    }
     await connectDB(process.env.MONGO_URL);
     app.listen(port, () => console.log(`Server is running on port ${port}`));
   } catch (error) {
-    console.log(error);
+    console.error('Failed to start server:', error.message);
+    process.exit(1);
   }
 };
 
